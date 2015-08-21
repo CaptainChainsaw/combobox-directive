@@ -32,6 +32,11 @@ list-name: This is the name of the list that will appear at the top of the list.
 
 loading-message: This is the message that will display until the options have finished loading.
 
+Set a function name that the directive will return selected values to within the controller:
+```sh
+combo-box-directive-selected-values="getSelectedChemicalValues"
+```
+
 
 # How to use directive for filtering
 
