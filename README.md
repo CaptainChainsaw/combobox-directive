@@ -3,7 +3,7 @@
 
 This directive when included displays a drop down list of values populated from an external JSON source.  Filtering is simple to implement, the steps below should be enough to get you going with it.
 
-Before going any further with this, here's an example to demonstrate how it works:  http://plnkr.co/edit/FTPdSSiKSOZiWptfJzuC?p=preview
+Before going any further with this, here's an example to demonstrate how it works:  http://plnkr.co/edit/anCUAVM9vHnUHPwUx0r3?p=preview
 
 
 In order to use this directive you will need the following:
@@ -15,7 +15,7 @@ In order to use this directive you will need the following:
 Include the directive:
 
 ```sh
-<combo-box url="http://democode.6te.net/filterusingdirectives/php/getChemicals.php" list-name="Select Chemicals" loading-message="loading chemicals ..." combo-box-directive-selected-values="getSelectedChemicalValues"></combo-box>
+<combo-box url="/php/getChemicals.php" list-name="Select Chemicals" loading-message="loading chemicals ..." combo-box-directive-selected-values="getSelectedChemicalValues"></combo-box>
 ```
 
 # Combobox Attrs
@@ -49,10 +49,10 @@ The ng-repeat has pipe delimited filters.  These take the form:  filter:selected
 ```sh
 <div ng-controller="resultsCtrl">
 	<div ng-controller="chemicalsCtrl">
-	 	<combo-box url="http://democode.6te.net/filterusingdirectives/php/getChemicals.php" list-name="Select Chemicals" loading-message="loading chemicals ..." combo-box-directive-selected-values="getSelectedChemicalValues"></combo-box>
+	 	<combo-box url="/php/getChemicals.php" list-name="Select Chemicals" loading-message="loading chemicals ..." combo-box-directive-selected-values="getSelectedChemicalValues"></combo-box>
 	</div>
 	<div ng-controller="concentrationCtrl">	
-	 	<combo-box url="http://democode.6te.net/filterusingdirectives/php/getConcentration.php" list-name="Select Concentration" loading-message="loading concentration values ..." combo-box-directive-selected-values="getSelectedConcentrationValues"></combo-box>
+	 	<combo-box url="/php/getConcentration.php" list-name="Select Concentration" loading-message="loading concentration values ..." combo-box-directive-selected-values="getSelectedConcentrationValues"></combo-box>
 	</div>
 
 	<div ng-repeat="result in results | chemicalsFilter:selectedChemicalValues | concentrationFilter:selectedConcentrationValues">
